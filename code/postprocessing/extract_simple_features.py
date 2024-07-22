@@ -234,7 +234,7 @@ def get_representation(dl):
 
         # update representation list
         old = representation_to_save
-        new = [solidity(mask[:,:,0]) ] # eccentricity(mask[:,:,0]) roundness(mask[:,:,0]) elongation(255. - mask[:,:,0]) compute_avg_color(image, mask), compute_dominant_color(image, mask), compute_area(mask), compute_orientation(mask)
+        new = [solidity(mask[:,:,0]),compute_avg_color(image, mask), compute_area(mask) ]
 
         representation_to_save = new if old is None else np.vstack((old, new))
 
@@ -268,7 +268,6 @@ def postprocess_model(directory, args):
 
     train_dataset = get_named_dataset(args["postprocess_dataset"])(split="train", get_filename=True)
     test_dataset = get_named_dataset(args["postprocess_dataset"])(split="test", get_filename=True)
-    #val_dataset = get_named_dataset(args["postprocess_dataset"])(split="val", get_filename=True)
 
     # split train and validation BALANCED
     train_dataset, val_dataset = train_test_split(train_dataset, test_size= args["perc_val_set"], random_state=args["split_random_seed"], stratify=[ y for x, y in train_dataset.samples])

@@ -151,38 +151,28 @@ def visualize_latent_space(directory, args):
                 if name in  ["Color", "Scale", "Orientation", "Texture", "Shape"] and namej in ["Color", "Scale", "Orientation", "Texture", "Shape"]:
                     print(simple_x.shape)
 
-                    """
+
                     namez = "Solidity"
                     scale = simple_x[:, 0]
                     print(scale.shape)
-                    # color = color[:, i_channel]
                     score = np.corrcoef(scale, x[:, i])[0, 1]
 
-                    # order simple_x[:, z]?
-                    # idx_ordered = np.argsort(simple_x[:, z])
-                    # x_ordered = x[idx_ordered, i]
+
                     save_scatterplot(x[:, i], scale, name + " (Z2)", namez + f" (handcrafted)",
                                                              path=os.path.join(split_path, f"{name}_scatter_{namez}.png"),
                                                              title=f"Pearson correlation: {score:.2}")
 
-                    """
 
-                    """
                     namez = "Scale"
                     scale = simple_x[:, 0]
                     print(scale.shape)
-                    # color = color[:, i_channel]
                     score = np.corrcoef(scale, x[:, i])[0, 1]
 
-                    # order simple_x[:, z]?
-                    # idx_ordered = np.argsort(simple_x[:, z])
-                    # x_ordered = x[idx_ordered, i]
                     save_scatterplot(x[:, i], scale, name + " (Z3)", namez + f" (handcrafted)",
                                          path=os.path.join(split_path, f"{name}_scatter_{namez}.png"),
                                          title=f"Pearson correlation: {score:.2}")
 
-                    """
-                    #"""
+
                     namez = "Color AVG"
                     for i_channel, channel in zip([0, 1, 2], ["Red", "Green", "Blue"]):
                         color = simple_x[:, i_channel]
@@ -190,61 +180,7 @@ def visualize_latent_space(directory, args):
                         #color = color[:, i_channel]
                         score = np.corrcoef(color, x[:, i])[0, 1]
 
-                        # order simple_x[:, z]?
-                        # idx_ordered = np.argsort(simple_x[:, z])
-                        # x_ordered = x[idx_ordered, i]
                         save_scatterplot(x[:, i], color, name + " (Z1)", namez + f" (handcrafted): {channel}",
                                          path=os.path.join(split_path, f"{name}_scatter_{namez}_{channel}.png"),
                                          title=f"Pearson correlation: {score:.2}")
-                    #"""
-                    """
-                    namez = "Color AVG"
 
-                    color = np.mean(simple_x, axis=1)
-                    print(color.shape)
-                    # color = color[:, i_channel]
-                    score = np.corrcoef(color, x[:, i])[0, 1]
-
-                    # order simple_x[:, z]?
-                    # idx_ordered = np.argsort(simple_x[:, z])
-                    # x_ordered = x[idx_ordered, i]
-                    save_scatterplot(x[:, i], color, name + " (Z1)", namez + f" (handcrafted)",
-                                         path=os.path.join(split_path, f"{name}_scatter_{namez}.png"),
-                                         title=f"Pearson correlation: {score:.2}")
-                    """
-                    """
-                    for z, namez in zip(range(simple_x.shape[1]), ["Color AVG", "Color Dominant", "Scale", "Orientation"]):
-                        print(simple_x[:, z].shape)
-                        if namez == "Color Dominant" or namez == "Color AVG":
-                            continue
-
-                        #print(x[:,i].shape, simple_x[:, z].shape)
-                        #if namez == "Color AVG":
-                            #print(simple_x[:, z])
-                        #save_scatterplot_with_simple_features(x[:, i], x[:, j], name, namej, simple_x[:, z],  path=os.path.join(split_path, f"{name}_{namej}_scatter_{namez}.png"), title=f"{name}-{namej}: {namez}")
-
-                        print(namez)
-
-                        if namez == "Color AVG":
-
-                            for i_channel, channel in zip([0, 1, 2], ["Red", "Green", "Blue"]):
-
-                                color = simple_x[:, z]
-                                print(color.shape)
-                                color = color[:, i_channel]
-                                score = np.corrcoef( color, x[:, i] )[0,1]
-
-                                # order simple_x[:, z]?
-                                #idx_ordered = np.argsort(simple_x[:, z])
-                                #x_ordered = x[idx_ordered, i]
-                                save_scatterplot(x[:, i], color, name + " (Zi)", namez + f" (handcrafted): {channel}", path=os.path.join(split_path, f"{name}_scatter_{namez}_{channel}.png"), title=f"Pearson correlation: {score}")
-
-                            continue
-
-
-                        score = np.corrcoef(simple_x[:, z], x[:, i])[0, 1]
-
-                        save_scatterplot_with_simple_features(x[:, i], x[:, j], name, namej, simple_x[:, z],  path=os.path.join(split_path, f"{name}_{namej}_scatter_{namez}.png"), title=f"{name}-{namej}: {namez}")
-
-                        save_scatterplot( x[:, i], simple_x[:, z],  name+" (Zi)", namez + " (handcrafted)", path=os.path.join(split_path, f"{name}_scatter_{namez}.png"), title=f"Pearson correlation: {score}")
-                        """

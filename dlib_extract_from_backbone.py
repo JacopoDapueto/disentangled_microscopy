@@ -13,7 +13,7 @@ FLAGS = flags.FLAGS
 flags.DEFINE_string("output_directory", None, "Output directory.")
 flags.DEFINE_string("backbone", "vit-b-1k-dino", "Name of the backbone.")
 
-flags.DEFINE_string("dataset", "plankton_masked_padded_224_test_bursaria", "Name of the dataset.")
+flags.DEFINE_string("dataset", "plankton_masked_padded_224", "Name of the dataset.")
 
 flags.DEFINE_integer("random_seed", 42, "Random seed.")
 

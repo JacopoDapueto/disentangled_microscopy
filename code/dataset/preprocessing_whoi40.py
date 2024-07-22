@@ -106,18 +106,8 @@ def main(unused_args):
     preprocess_split("train")
     #preprocess_split("TEST_IMAGE")
 
-def main_mask(unused_args):
-    generate_masks("train")
 
 
 
 if __name__ == "__main__":
     app.run(main)
-
-"""
-if __name__ == "__main__":
-
-    print("Generate masks!")
-    app.run(main_mask)
-    
-"""
