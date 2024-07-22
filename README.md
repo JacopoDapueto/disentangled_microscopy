@@ -34,11 +34,8 @@ python code/dataset/preprocessing_whoi40.py
 
 ## How to reproduce 
 
-### `./config` folder contains the .yaml files to reproduce the experiments
-To reproduce the experiment of the study use the scripts in the folder 
-```
-./bash_scripts
-```
+`./config` folder contains the .yaml files to reproduce the experiments
+
 
 ### Extract deep features from the backbone
 To extract the features $\Phi$ executes:
@@ -80,7 +77,7 @@ To transfer (without and with fine-tuning) and to evaluate the representation, r
 python dlib_transfer_dsprites_to_plankton.py --config <name of the config folder> --experiment <name of the output directory>
 ```
 The results will be saved in `./output` directory, organized by experiment name:
-*experiment/sweeps* and each sweep is divided into `before` and `after` (meaning w/o or w/ finetuning ).
+*experiment/sweeps* and each sweep is further divided into `before` and `after` folders (meaning w/o or w/ finetuning ).
 
 **Once** one experiment folder is completed aggregate the results of all random seeds with the scripts
 ```
