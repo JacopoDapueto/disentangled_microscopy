@@ -19,9 +19,7 @@ pip install -r requirements.txt
 export DISENTANGLEMENT_LIB_DATA=<path to the data directory>
 ```
 2. Download all the necessary datasets that can be found in the following links
-   [Lenseless](https://ibm.ent.box.com/v/PlanktonData)
-   [WHOI40](https://ibm.ent.box.com/v/PlanktonData)
-   [WHOI15](https://github.com/Malga-Vision/Anomaly-detection-in-feature-space-for-detecting-changes-in-phytoplankton-populations)
+   [Lenseless](https://ibm.ent.box.com/v/PlanktonData),  [WHOI40](https://ibm.ent.box.com/v/PlanktonData),  [WHOI15](https://github.com/Malga-Vision/Anomaly-detection-in-feature-space-for-detecting-changes-in-phytoplankton-populations)
 
 4. Unzip the compressed files and put in DISENTANGLEMENT_LIB_DATA
 
