@@ -108,22 +108,6 @@ def _compute_model(x_train, x_test, predictor):
     return  model
 
 
-def compute_downstream_task(representation, classes, predictor):
-
-    scores = {}
-
-    x_train, x_val, x_test = representation["train"], representation["val"], representation["test"]
-
-    predictor_model = make_predictor(predictor)
-
-    model = _compute_model(x_train, x_val, predictor_model)
-
-    train_distances, _ = model.kneighbors(x_train)
-    val_distances, _ = model.kneighbors(x_val)
-    test_distances,_ = model.kneighbors(x_test)
-    scores["train"], scores["val"], scores["test"]  = train_distances.mean(axis=1).mean(), val_distances.mean(axis=1).mean(), test_distances.mean(axis=1).mean()
-    return scores, model
-
 
 
 
@@ -164,18 +148,9 @@ class Blob_distance(Metric):
             for line in file:
                 train_labels_name.append(line)  # storing everything in memory!
 
-        #scores, model = compute_downstream_task(rep, csv, predictor=self.predictor)
-
-
 
         x_train, x_val, x_test = rep["train"], rep["val"], rep["test"]
         y_train, y_val, y_test = csv["train"].astype(np.int32), csv["val"].astype(np.int32), csv["test"].astype(np.int32)
-
-        # modify the labels
-        labels_name = [class_to_compare_name, class_name]
-
-        # normalize representation
-        #x_test = min_max_normalization(x_test)
 
 
         # compute centroid
