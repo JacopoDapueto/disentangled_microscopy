@@ -34,7 +34,7 @@ python code/dataset/preprocessing_whoi40.py
 
 ## How to reproduce 
 
-### _config_ folder contains the .yaml files to reproduce the experiments
+### `./config` folder contains the .yaml files to reproduce the experiments
 To reproduce the experiment of the study use the scripts in the folder 
 ```
 ./bash_scripts
@@ -47,7 +47,7 @@ The scripts starting with *train_* execute the training of the Source models.
 bash ./bash_scripts/train_*.sh
 ```
 
-The results will be saved in `./outuput` directory, organized by _experiment name_ and numbered by the _random seed_.
+The results will be saved in `./output` directory, organized by _experiment name_ and numbered by the _random seed_.
 
 **Once** one experiment folder is completed aggregate the results of all random seeds with the scripts
 ```
@@ -57,12 +57,11 @@ python dlib_aggregate_results_experiment.py --experiment experiment_name
 
 ### Transfer on Target dataset
 **Once** you have trained the source models, run the scripts to execute the transfer experiments.
-
+To transfer (without and with fine-tuning) and to evaluate the representation, run the following script:
 ```
-bash ./bash_scripts/transfer_*.sh
+python dlib_transfer_dsprites_to_plankton.py --config <name of the config folder> --experiment <name of the output directory>
 ```
-
-The results will be saved in `./outuput` directory, organized by experiment name:
+The results will be saved in `./output` directory, organized by experiment name:
 *source_experiment*\_to\_*target_experiment*
 
 **Once** one experiment folder is completed aggregate the results of all random seeds with the scripts
