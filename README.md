@@ -88,6 +88,13 @@ python dlib_group_results_scores.py --experiment experiment_name
 ```
 For each score of interest (e.g. accuracy) a .json file is created inside the experiment folder reporting mean and std.
 
+### Open set experiment
+To evaluate the model on the open-set setting, run the following script with default parameters:
+
+```
+python dlib_evaluate_open_set.py
+```
+
 ### Visualizations on Target dataset
 
 To reproduce the visualizations run the following scripts
@@ -95,6 +102,8 @@ To reproduce the visualizations run the following scripts
 python dlib_visualize_latent_space.py --config <name of the config folder> --experiment <name of the output directory> --model_num <name of the sweep to visualize>
 python dlib_visualize_latent_space_with_handcrafted.py --config <name of the config folder> --experiment <name of the output directory> --model_num <name of the sweep to visualize>
 python dlib_visualize_latent_space_open_set.py --config <name of the config folder> --experiment <name of the output directory> --model_num <name of the sweep to visualize>
-``` 
+```
+
+
 
 
