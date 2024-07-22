@@ -54,7 +54,7 @@ The features are saved in DISENTANGLEMENT_LIB_DATA as `SIMPLE_FEATURES/represent
 
 
 ### Train Source models
-We trained the Source models using the implementation of Ada-GVAE and dSprites in [disentanglement_lib](https://github.com/google-research/disentanglement_lib), 
+We trained the Source models using the implementation of Ada-GVAE and dSprites in [disentanglement_lib](https://github.com/google-research/disentanglement_lib).
 
 
 ### Transfer on Target dataset
