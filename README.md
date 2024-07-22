@@ -41,7 +41,7 @@ To reproduce the experiment of the study use the scripts in the folder
 ```
 
 ### Extract deep features from the backbone
-To extract the features $\Phi& executes:
+To extract the features $\Phi$ executes:
 ```
 python dlib_extract_from_backbone.py --dataset <name of the dataset>
 ```
@@ -50,12 +50,12 @@ The representation is saved in DISENTANGLEMENT_LIB_DATA as .npz file.
 The name of the datasets to be used can be found in `./code/choose_dataset.py`
 
 
-### Compute hand crafted features
-To extract the handcrafted features of Lensless:
+### Compute hand-crafted features
+To extract the hand-crafted features of Lensless:
 ```
 python dlib_extract_simple_features.py
 ```
-The features are saved in DISENTANGLEMENT_LIB_DATA as .npz file.
+The features are saved in DISENTANGLEMENT_LIB_DATA as `SIMPLE_FEATURES/representation.npz` file.
 
 
 ### Train Source models
