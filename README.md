@@ -56,18 +56,7 @@ The features are saved in DISENTANGLEMENT_LIB_DATA as `SIMPLE_FEATURES/represent
 
 
 ### Train Source models
-The scripts starting with *train_* execute the training of the Source models.
-
-```
-bash ./bash_scripts/train_*.sh
-```
-
-The results will be saved in `./output` directory, organized by _experiment name_ and numbered by the _random seed_.
-
-**Once** one experiment folder is completed aggregate the results of all random seeds with the scripts
-```
-python dlib_aggregate_results_experiment.py --experiment experiment_name 
-```
+We trained the Source models using the implementation of Ada-GVAE and dSprites in [disentanglement_lib](https://github.com/google-research/disentanglement_lib), 
 
 
 ### Transfer on Target dataset
