@@ -1,10 +1,10 @@
-# disentangled_plankton
+# Disentangled representations of plankton images for oceanic ecosystems monitoring
 Official repository of "Disentangled representations of plankton images for oceanic ecosystems monitoring"
 
 
 ## Set up
 ### Install
-The code was developed and tested with Python 3.10 and the main dependencies are Pytorch 2.0.0 and Cuda 11.7. We do use Wandb for logging scores and models.
+The code was developed and tested with Python 3.10 and the main dependencies are Pytorch 2.0.0 and Cuda 11.7. We use Wandb to log scores and models.
 
 Set up the environment and then install the dependencies with
 ```
@@ -40,6 +40,24 @@ To reproduce the experiment of the study use the scripts in the folder
 ./bash_scripts
 ```
 
+### Extract deep features from the backbone
+To extract the features $\Phi& executes:
+```
+python dlib_extract_from_backbone.py --dataset <name of the dataset>
+```
+The representation is saved in DISENTANGLEMENT_LIB_DATA as .npz file.
+
+The name of the datasets to be used can be found in `./code/choose_dataset.py`
+
+
+### Compute hand crafted features
+To extract the handcrafted features of Lensless:
+```
+python dlib_extract_simple_features.py
+```
+The features are saved in DISENTANGLEMENT_LIB_DATA as .npz file.
+
+
 ### Train Source models
 The scripts starting with *train_* execute the training of the Source models.
 
@@ -62,15 +80,21 @@ To transfer (without and with fine-tuning) and to evaluate the representation, r
 python dlib_transfer_dsprites_to_plankton.py --config <name of the config folder> --experiment <name of the output directory>
 ```
 The results will be saved in `./output` directory, organized by experiment name:
-*source_experiment*\_to\_*target_experiment*
+*experiment/sweeps* and each sweep is divided into `before` and `after` (meaning w/o or w/ finetuning ).
 
 **Once** one experiment folder is completed aggregate the results of all random seeds with the scripts
 ```
-python dlib_aggregate_results_transfer_experiment.py --experiment experiment_name 
+python dlib_group_results_scores.py --experiment experiment_name 
 ```
-**Then** to read and save the results of the experiment run
+For each score of interest (e.g. accuracy) a .json file is created inside the experiment folder reporting mean and std.
+
+### Visualizations on Target dataset
+
+To reproduce the visualizations run the following scripts
 ```
-python dlib_compare_transfer.py --experiment experiment_name --values_to_aggregate "model_num"
-```
+python dlib_visualize_latent_space.py --config <name of the config folder> --experiment <name of the output directory> --model_num <name of the sweep to visualize>
+python dlib_visualize_latent_space_with_handcrafted.py --config <name of the config folder> --experiment <name of the output directory> --model_num <name of the sweep to visualize>
+python dlib_visualize_latent_space_open_set.py --config <name of the config folder> --experiment <name of the output directory> --model_num <name of the sweep to visualize>
+``` 
 
 
