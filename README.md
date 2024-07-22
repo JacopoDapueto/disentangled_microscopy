@@ -92,6 +92,15 @@ To evaluate the model on the open-set setting, run the following script with def
 python dlib_evaluate_open_set.py
 ```
 
+
+### Without disentanglement
+To evaluate the classifiers directly on $\Phi$, run the script with default parameters:
+
+```
+python dlib_compute_baseline.py
+```
+
+
 ### Visualizations on Target dataset
 
 To reproduce the visualizations run the following scripts
