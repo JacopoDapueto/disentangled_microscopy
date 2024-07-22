@@ -58,7 +58,7 @@ We trained the Source models using the implementation of Ada-GVAE and dSprites i
 
 
 ### Transfer on Target dataset
-**Once** you have trained the source models, run the scripts to execute the transfer experiments.
+**Once** you have trained the source models, put them in `./input` folder and run the scripts to execute the transfer experiments.
 To transfer (without and with fine-tuning) and to evaluate the representation, run the following script:
 ```
 python dlib_transfer_dsprites_to_plankton.py --config <name of the config folder> --experiment <name of the output directory>
