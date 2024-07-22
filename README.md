@@ -13,24 +13,28 @@ pip install -r requirements.txt
 
 ### Download and prepare datasets
 
-1. Set the environment variable `DISENTANGLEMENT_TRANSFER_DATA` to this path, for example by adding
+1. Set the environment variable `DISENTANGLEMENT_LIB_DATA` to this path, for example by adding
 
 ```
-export DISENTANGLEMENT_TRANSFER_DATA=<path to the data directory>
+export DISENTANGLEMENT_LIB_DATA=<path to the data directory>
 ```
-2. Download all the necessary datasets with the script
-```
-./bash_scripts/download_datasets.sh
-```
-3. Unzip the compressed files (Coil100 and RGDB Objects)
+2. Download all the necessary datasets that can be found in the following links
+   [Lenseless](https://ibm.ent.box.com/v/PlanktonData)
+   [WHOI40](https://ibm.ent.box.com/v/PlanktonData)
+   [WHOI15](https://github.com/Malga-Vision/Anomaly-detection-in-feature-space-for-detecting-changes-in-phytoplankton-populations)
 
-4. Create the augmented and binary version of Coil100 with the command
+4. Unzip the compressed files and put in DISENTANGLEMENT_LIB_DATA
+
+5. Postprocess the dataset with the commands
 ```
-python create_coil100_augmented/augment_coil100.py
+python code/dataset/preprocessing_lensless.py
+python code/dataset/preprocessing_whoi15.py
+python code/dataset/preprocessing_whoi40.py
 ```
 
 ## How to reproduce 
 
+### _config_ folder contains the .yaml files to reproduce the experiments
 To reproduce the experiment of the study use the scripts in the folder 
 ```
 ./bash_scripts
