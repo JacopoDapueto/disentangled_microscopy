@@ -19,7 +19,7 @@ pip install -r requirements.txt
 export DISENTANGLEMENT_LIB_DATA=<path to the data directory>
 ```
 2. Download all the necessary datasets that can be found in the following links
-   [Lenseless](https://ibm.ent.box.com/v/PlanktonData),  [WHOI40](https://ibm.ent.box.com/v/PlanktonData),  [WHOI15](https://github.com/Malga-Vision/Anomaly-detection-in-feature-space-for-detecting-changes-in-phytoplankton-populations)
+   [Lenseless](https://ibm.ent.box.com/v/PlanktonData),  [WHOI15](https://github.com/Malga-Vision/Anomaly-detection-in-feature-space-for-detecting-changes-in-phytoplankton-populations), [Vacuoles](), [Sipakmed]() 
 
 4. Unzip the compressed files and put in DISENTANGLEMENT_LIB_DATA
 
@@ -27,7 +27,6 @@ export DISENTANGLEMENT_LIB_DATA=<path to the data directory>
 ```
 python code/dataset/preprocessing_lensless.py
 python code/dataset/preprocessing_whoi15.py
-python code/dataset/preprocessing_whoi40.py
 ```
 
 ## How to reproduce 
@@ -71,6 +70,11 @@ The results will be saved in `./output` directory, organized by experiment name:
 python dlib_group_results_scores.py --experiment experiment_name 
 ```
 For each score of interest (e.g. accuracy) a .json file is created inside the experiment folder reporting mean and std.
+
+### Compute Disentanglement metrics OMES, DCI and MIG
+```
+python dlib_compute_disentanglement_metrics_dsprites.py --experiment experiment_name --config <name of the config folder>
+```
 
 ### Open set experiment
 To evaluate the model on the open-set setting, run the following script with default parameters:
