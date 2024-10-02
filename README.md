@@ -1,4 +1,4 @@
-# Disentangled representations of plankton images for oceanic ecosystems monitoring
+# Disentangled representations of microscopy images
 Official repository of "Disentangled representations of plankton images for oceanic ecosystems monitoring"
 
 
