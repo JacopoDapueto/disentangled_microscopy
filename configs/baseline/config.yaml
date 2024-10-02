@@ -33,7 +33,8 @@ parameters:
     values:
       - lensless_representation
       - whoi15_2007_representation
-      - whoi40_representation
+      - vacuoles_representation
+      - sipakmed_representation
 
 
 

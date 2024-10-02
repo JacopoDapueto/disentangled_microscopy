@@ -20,6 +20,11 @@ WHOI15_2007_REPRESENTATION_PADDED224_PATH = os.path.join(PLANKTON_REPRESENTATION
 WHOI40_REPRESENTATION_PADDED224_PATH = os.path.join(PLANKTON_REPRESENTATION_PATH, "whoi40_padded_224")
 
 
+VACUOLES_REPRESENTATION_PATH = os.path.join(os.environ.get("DISENTANGLEMENT_LIB_DATA", "."), "vacuoles", "representation", "vit-b-1k-dino")
+
+SIPAKMED_REPRESENTATION_PATH = os.path.join(os.environ.get("DISENTANGLEMENT_LIB_DATA", "."), "sipakmed", "representation", "vit-b-1k-dino")
+
+
 
 
 
@@ -93,6 +98,113 @@ class NumpyDataset(torch.utils.data.Dataset):
 
   def __len__(self):
     return self.x.shape[0]
+
+
+
+
+class SIPAKMEDDataset(NumpyDataset):
+
+    def __init__(self, split, classes=None, get_filename=False, random_seed=0):
+        self.data_shape = [768]
+
+        assert split in ["train", "val", "test"]
+
+        self.get_filename = get_filename
+
+        # load representation
+        rep = np.load(os.path.join(SIPAKMED_REPRESENTATION_PATH, "representations.npz"))
+        csv = np.load(os.path.join(SIPAKMED_REPRESENTATION_PATH, "classes.npz"))
+        self.filenames = np.load(os.path.join(SIPAKMED_REPRESENTATION_PATH, "filenames.npz"))[split]
+
+
+        if split == "train" or split == "val":
+            filename = 'TRAIN_labels_name.txt'
+
+        else:
+            filename = 'TEST_labels_name.txt'
+        labels_name = []
+        with open(os.path.join(SIPAKMED_REPRESENTATION_PATH, filename)) as file:
+          for line in file:
+            labels_name.append(line[:-1])  # storing everything in memory!
+
+
+        x = rep[split]
+        y = csv[split]
+
+        # normalization
+        x = dsprites_min_max_normalization(x)
+
+        self.samples = [ (x[i], y[i]) for i in range(x.shape[0])]
+        self.classes = labels_name
+
+        super(SIPAKMEDDataset, self).__init__(x, y)
+
+
+
+    def __getitem__(self, item):
+        x, y = super(SIPAKMEDDataset, self).__getitem__(item)
+
+        if self.get_filename:
+            filename = self.filenames[item]
+
+            return x, y, filename
+
+
+        return x, y
+
+
+
+
+
+class VACUOLESDataset(NumpyDataset):
+
+    def __init__(self, split, classes=None, get_filename=False, random_seed=0):
+        self.data_shape = [768]
+
+        assert split in ["train", "val", "test"]
+
+        self.get_filename = get_filename
+
+        # load representation
+        rep = np.load(os.path.join(VACUOLES_REPRESENTATION_PATH, "representations.npz"))
+        csv = np.load(os.path.join(VACUOLES_REPRESENTATION_PATH, "classes.npz"))
+        self.filenames = np.load(os.path.join(VACUOLES_REPRESENTATION_PATH, "filenames.npz"))[split]
+
+
+        if split == "train" or split == "val":
+            filename = 'TRAIN_labels_name.txt'
+
+        else:
+            filename = 'TEST_labels_name.txt'
+        labels_name = []
+        with open(os.path.join(VACUOLES_REPRESENTATION_PATH, filename)) as file:
+          for line in file:
+            labels_name.append(line[:-1])  # storing everything in memory!
+
+
+        x = rep[split]
+        y = csv[split]
+
+        # normalization
+        x = dsprites_min_max_normalization(x)
+
+        self.samples = [ (x[i], y[i]) for i in range(x.shape[0])]
+        self.classes = labels_name
+
+        super(VACUOLESDataset, self).__init__(x, y)
+
+
+
+    def __getitem__(self, item):
+        x, y = super(VACUOLESDataset, self).__getitem__(item)
+
+        if self.get_filename:
+            filename = self.filenames[item]
+
+            return x, y, filename
+
+
+        return x, y
 
 
 

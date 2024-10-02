@@ -16,7 +16,7 @@ from code.dataset.representation_dataset import PLANKTON_REPRESENTATION_PADDED22
 FLAGS = flags.FLAGS
 flags.DEFINE_string("experiment", "baseline", "Name of the experiment to run")
 flags.DEFINE_string("config", "baseline", "Name of the config to run")
-flags.DEFINE_integer("n_sweep", 30, "Number of sweeps to run")
+flags.DEFINE_integer("n_sweep", 40, "Number of sweeps to run")
 
 flags.DEFINE_string("output_directory", None, "Output directory of experiments ('{model_num}' will be"
                                                 " replaced with the model index  and '{experiment}' will be"

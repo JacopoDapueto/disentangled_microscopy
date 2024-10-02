@@ -7,8 +7,29 @@ from code.dataset.whoi40_padded import WHOI40Padded224
 from code.dataset.representation_dataset import LENSLESSDataset, WHOI152007Dataset, WHOI40Dataset, LENSLESSDataset_TestArcella
 
 
+from code.dataset.vacuoles import VACUOLES
+from code.dataset.representation_dataset import VACUOLESDataset
+
+from code.dataset.sipakmed import SIPAKMED
+from code.dataset.representation_dataset import SIPAKMEDDataset
 
 def get_named_dataset(name):
+
+
+    if name == "sipakmed":
+        return SIPAKMED
+
+    if name == "sipakmed_representation":
+        return SIPAKMEDDataset
+
+    if name == "vacuoles":
+        return VACUOLES
+
+
+    if name == "vacuoles_representation":
+        return VACUOLESDataset
+
+
 
     if name == "whoi15_2007_padded_224":
         return WHOI15Padded224
