@@ -64,7 +64,7 @@ The features are saved in DISENTANGLEMENT_LIB_DATA as `SIMPLE_FEATURES/represent
 
 
 ### Train Source models
-We trained the Source models on **RGB** input using the implementation of Ada-GVAE and dSprites in [transfer_disentanglement](https://github.com/JacopoDapueto/transfer_disentanglement).
+**RGB Input:** We trained the Source models on  input using the implementation of Ada-GVAE and dSprites in [transfer_disentanglement](https://github.com/JacopoDapueto/transfer_disentanglement).
 
 
 ### Transfer on Target dataset
