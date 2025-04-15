@@ -1,6 +1,8 @@
 # Disentangled representations of microscopy images
-Official repository of "Disentangled representations of plankton images for oceanic ecosystems monitoring"
+This is official code repository of the paper **"Disentangled representations of microscopy images"** ([IJCNN 2025]())
+Jacopo Dapueto, Vito Paolo Pastore, Nicoletta Noceti, Francesca Odone
 
+[[ArXiv preprint📃]()] [[Dataset🤗]()]
 
 ## Set up
 ### Install
@@ -12,8 +14,9 @@ pip install -r requirements.txt
 ```
 
 ### Download and prepare datasets
+#### Microscopy datasets
 
-1. Set the environment variable `DISENTANGLEMENT_LIB_DATA` to this path, for example by adding
+1. Set the environment variable `DISENTANGLEMENT_LIB_DATA` to this path, for example, by adding
 
 ```
 export DISENTANGLEMENT_LIB_DATA=<path to the data directory>
@@ -28,7 +31,11 @@ export DISENTANGLEMENT_LIB_DATA=<path to the data directory>
 python code/dataset/preprocessing_lensless.py
 python code/dataset/preprocessing_whoi15.py
 ```
+#### Texture-dSprites
+1. Download the .npz file for [dSprites](https://github.com/google-deepmind/dsprites-dataset) and put it in folder `DISENTANGLEMENT_LIB_DATA/dsprites/`
 
+2. Download the textures from the [database](https://multibandtexture.recherche.usherbrooke.ca/normalized_brodatz.html) and put them in folder `DISENTANGLEMENT_LIB_DATA/texture/`
+   
 ## How to reproduce 
 
 `./config` folder contains the .yaml files to reproduce the experiments
@@ -53,7 +60,7 @@ The features are saved in DISENTANGLEMENT_LIB_DATA as `SIMPLE_FEATURES/represent
 
 
 ### Train Source models
-We trained the Source models using the implementation of Ada-GVAE and dSprites in [disentanglement_lib](https://github.com/google-research/disentanglement_lib).
+We trained the Source models on **RGB** input using the implementation of Ada-GVAE and dSprites in [transfer_disentanglement](https://github.com/JacopoDapueto/transfer_disentanglement).
 
 
 ### Transfer on Target dataset
