@@ -1,5 +1,6 @@
 # Disentangled representations of microscopy images
 This is official code repository of the paper **"Disentangled representations of microscopy images"** ([IJCNN 2025]())
+
 Jacopo Dapueto, Vito Paolo Pastore, Nicoletta Noceti, Francesca Odone
 
 [[ArXiv preprint📃]()] [[Dataset🤗]()]
