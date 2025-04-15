@@ -16,7 +16,7 @@ pip install -r requirements.txt
 ### Download and prepare datasets
 #### Microscopy datasets
 
-1. Set the environment variable `DISENTANGLEMENT_LIB_DATA` to this path, for example by adding
+1. Set the environment variable `DISENTANGLEMENT_LIB_DATA` to this path, for example, by adding
 
 ```
 export DISENTANGLEMENT_LIB_DATA=<path to the data directory>
@@ -60,7 +60,7 @@ The features are saved in DISENTANGLEMENT_LIB_DATA as `SIMPLE_FEATURES/represent
 
 
 ### Train Source models
-We trained the Source models using the implementation of Ada-GVAE and dSprites in [transfer_disentanglement](https://github.com/JacopoDapueto/transfer_disentanglement).
+We trained the Source models on **RGB** input using the implementation of Ada-GVAE and dSprites in [transfer_disentanglement](https://github.com/JacopoDapueto/transfer_disentanglement).
 
 
 ### Transfer on Target dataset
