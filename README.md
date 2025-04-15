@@ -1,6 +1,8 @@
 # Disentangled representations of microscopy images
-Official repository of "Disentangled representations of plankton images for oceanic ecosystems monitoring"
+This is official code repository of the paper **"Disentangled representations of plankton images for oceanic ecosystems monitoring"** ([IJCNN 2025]())
+Jacopo Dapueto, Vito Paolo Pastore, Nicoletta Noceti, Francesca Odone
 
+[[ArXiv preprint📃]()] [[Dataset🤗]()]
 
 ## Set up
 ### Install
