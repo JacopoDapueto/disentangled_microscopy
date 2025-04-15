@@ -4,7 +4,8 @@ Jacopo Dapueto, Vito Paolo Pastore, Nicoletta Noceti, Francesca Odone
 
 [[ArXiv preprint📃]()] [[Dataset🤗]()]
 
-![alt text](https://github.com/JacopoDapueto/disentangled_plankton/blob/main/assets/pipeline.png?raw=true)
+<img src="[https://github.com/favicon.ico](https://github.com/JacopoDapueto/disentangled_plankton/blob/main/assets/pipeline.png?raw=true)" width="48">
+
 
 ## Set up
 ### Install
