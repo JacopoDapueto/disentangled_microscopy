@@ -1,5 +1,5 @@
 # Disentangled representations of microscopy images
-This is official code repository of the paper **"Disentangled representations of plankton images for oceanic ecosystems monitoring"** ([IJCNN 2025]())
+This is official code repository of the paper **"Disentangled representations of microscopy images"** ([IJCNN 2025]())
 Jacopo Dapueto, Vito Paolo Pastore, Nicoletta Noceti, Francesca Odone
 
 [[ArXiv preprint📃]()] [[Dataset🤗]()]
@@ -34,7 +34,7 @@ python code/dataset/preprocessing_whoi15.py
 #### Texture-dSprites
 1. Download the .npz file for [dSprites](https://github.com/google-deepmind/dsprites-dataset) and put it in folder `DISENTANGLEMENT_LIB_DATA/dsprites/`
 
-2. Download the textures from [here](https://multibandtexture.recherche.usherbrooke.ca/normalized_brodatz.html) and put them in folder `DISENTANGLEMENT_LIB_DATA/texture/`
+2. Download the textures from the [database](https://multibandtexture.recherche.usherbrooke.ca/normalized_brodatz.html) and put them in folder `DISENTANGLEMENT_LIB_DATA/texture/`
    
 ## How to reproduce 
 
