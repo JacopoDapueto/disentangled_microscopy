@@ -4,6 +4,8 @@ Jacopo Dapueto, Vito Paolo Pastore, Nicoletta Noceti, Francesca Odone
 
 [[ArXiv preprint📃]()] [[Dataset🤗]()]
 
+![alt text](https://github.com/[JacopoDapueto]/[disentangled_plankton]/blob/[main]/assets/pipeline.png?raw=true)
+
 ## Set up
 ### Install
 The code was developed and tested with Python 3.10 and the main dependencies are Pytorch 2.0.0 and Cuda 11.7. We use Wandb to log scores and models.
