@@ -13,6 +13,9 @@ def get_named_model(name):
     if name == "vae":
         return VAE
 
+    if name == "vae_drl":
+        return VAE_DRL
+
 
     if name== "backbone_vae":
         return BACKBONEVAE

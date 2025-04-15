@@ -146,7 +146,6 @@ def postprocess_dsprites(directory, args):
 
 
 
-    print(directory)
     output_directory = os.path.join(directory, "postprocess_dsprites")
 
     if not os.path.exists(output_directory):

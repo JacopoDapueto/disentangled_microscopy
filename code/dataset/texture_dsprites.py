@@ -279,16 +279,3 @@ class SimpleTextureDSprites(data.Dataset): # data.Dataset
 
 
 
-
-if __name__ == "__main__":
-    # Example usage
-    factors_size = [3, 4, 5]
-    idx = 37
-
-    # Convert index to factors
-    factors = index_to_factor(idx, factors_size)
-    print("Factors:", factors)
-
-    # Convert factors back to index
-    reconstructed_idx = factor_to_index(factors, factors_size)
-    print("Reconstructed Index:", reconstructed_idx)
