@@ -14,6 +14,7 @@ pip install -r requirements.txt
 ```
 
 ### Download and prepare datasets
+#### Microscopy datasets
 
 1. Set the environment variable `DISENTANGLEMENT_LIB_DATA` to this path, for example by adding
 
@@ -30,7 +31,11 @@ export DISENTANGLEMENT_LIB_DATA=<path to the data directory>
 python code/dataset/preprocessing_lensless.py
 python code/dataset/preprocessing_whoi15.py
 ```
+#### Texture-dSprites
+1. Download the .npz file for [dSprites](https://github.com/google-deepmind/dsprites-dataset) and put it in folder `DISENTANGLEMENT_LIB_DATA/dsprites/`
 
+2. Download the textures from [here](https://multibandtexture.recherche.usherbrooke.ca/normalized_brodatz.html) and put them in folder `DISENTANGLEMENT_LIB_DATA/texture/`
+   
 ## How to reproduce 
 
 `./config` folder contains the .yaml files to reproduce the experiments
