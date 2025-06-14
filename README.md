@@ -1,8 +1,12 @@
 # Disentangled representations of microscopy images
-This is official code repository of the paper **"Disentangled representations of microscopy images"** ([IJCNN 2025]())
-Jacopo Dapueto, Vito Paolo Pastore, Nicoletta Noceti, Francesca Odone
+This is official code repository of the paper **"Disentangled representations of microscopy images"** ([IJCNN 2025](https://2025.ijcnn.org/))
+
+**Jacopo Dapueto**, Vito Paolo Pastore, Nicoletta Noceti, Francesca Odone
 
 [[ArXiv preprint📃]()] [[Dataset🤗]()]
+
+<img src="https://github.com/JacopoDapueto/disentangled_plankton/blob/main/assets/pipeline.png" width="50%" align="center">
+
 
 ## Set up
 ### Install
@@ -60,7 +64,7 @@ The features are saved in DISENTANGLEMENT_LIB_DATA as `SIMPLE_FEATURES/represent
 
 
 ### Train Source models
-We trained the Source models on **RGB** input using the implementation of Ada-GVAE and dSprites in [transfer_disentanglement](https://github.com/JacopoDapueto/transfer_disentanglement).
+**RGB Input:** We trained the Source models on  input using the implementation of Ada-GVAE and dSprites in [transfer_disentanglement](https://github.com/JacopoDapueto/transfer_disentanglement).
 
 
 ### Transfer on Target dataset
@@ -110,4 +114,17 @@ python dlib_visualize_latent_space_open_set.py --config <name of the config fold
 
 
 
+## 📧 Contacts
+If you have any questions, you are very welcome to email jacopo.dapueto@gmail.com
 
+## 📚 Bibtex citation
+If you use our dataset or code, please give the repository a star ⭐ and cite our paper:
+
+```BibTeX
+@inproceedings{IJCNN2025_dapueto,
+ author = {Dapueto, Jacopo and Vito Paolo, Pastore and Noceti, Nicoletta and Odone, Francesca},
+ booktitle={2024 International Joint Conference on Neural Networks (IJCNN)}, 
+ title={Disentangled representations of microscopy images}, 
+ year={2025},
+ pages={1-8},
+}
