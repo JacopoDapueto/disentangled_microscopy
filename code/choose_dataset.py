@@ -13,8 +13,17 @@ from code.dataset.representation_dataset import VACUOLESDataset
 from code.dataset.sipakmed import SIPAKMED
 from code.dataset.representation_dataset import SIPAKMEDDataset
 
+
+from code.dataset.texture_dsprites import TextureDSprites
+from code.dataset.texture_dsprites_dino_features import dSpritesDino
+
 def get_named_dataset(name):
 
+    if name == "texture-dsprites-dino":
+        return dSpritesDino
+
+    if name == "texture-dsprites":
+        return TextureDSprites
 
     if name == "sipakmed":
         return SIPAKMED

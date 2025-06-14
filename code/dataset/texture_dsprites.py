@@ -157,7 +157,7 @@ def apply_texture(image, texture):
 
 
 
-class SimpleTextureDSprites(data.Dataset): # data.Dataset
+class TextureDSprites(data.Dataset): # data.Dataset
   """DSprites dataset.
 
   The data set was originally introduced in "beta-VAE: Learning Basic Visual

@@ -8,13 +8,11 @@ import yaml
 import wandb
 
 from code.training.train_adagvae import train_model
-from code.postprocessing.postprocess import postprocess_model
-from code.visualization.visualize_model import visualize_model
-from code.downstream_task.downstream_task import GBT_regressor, MLP_regressor
+
 
 FLAGS = flags.FLAGS
-flags.DEFINE_string("experiment", "VAE_DRL_plankton", "Name of the experiment to run")
-flags.DEFINE_string("config", "train_drl_maskedplankton", "Name of the config to run")
+flags.DEFINE_string("experiment", "VAE_DRL_microscopy", "Name of the experiment to run")
+flags.DEFINE_string("config", "train_drl_brodatz_texture_dsprites", "Name of the config to run")
 flags.DEFINE_string("output_directory", None, "Output directory of experiments ('{model_num}' will be"
                                                 " replaced with the model index  and '{experiment}' will be"
                                                 " replaced with the study name if present).")
@@ -82,21 +80,7 @@ def main():
         _ = yaml.dump(run.config, f)
 
     train_model(output_directory, run.config)
-    postprocess_model(output_directory, run.config)
-    run.config["path_to_representation"] = os.path.join(output_directory, "postprocess")
 
-    # visualization
-    visualize_model(output_directory, run.config)
-
-    # run plankton classification
-    gbt_classifier = GBT_regressor(mode=None, path= run.config["path_to_representation"])
-    mlp_classifier = MLP_regressor(mode=None, path= run.config["path_to_representation"])
-
-    print("===============START DOWNSTREAMTASK===============")
-    scores = gbt_classifier.get_score()
-    scores = mlp_classifier.get_score()
-
-    print("===============END DOWNSTREAMTASK===============")
     run.finish()
 
 
