@@ -114,4 +114,17 @@ python dlib_visualize_latent_space_open_set.py --config <name of the config fold
 
 
 
+## 📧 Contacts
+If you have any questions, you are very welcome to email jacopo.dapueto@gmail.com
 
+## 📚 Bibtex citation
+If you use our dataset or code, please give the repository a star ⭐ and cite our paper:
+
+```BibTeX
+@inproceedings{IJCNN2025_dapueto,
+ author = {Dapueto, Jacopo and Vito Paolo, Pastore and Noceti, Nicoletta and Odone, Francesca},
+ booktitle={2024 International Joint Conference on Neural Networks (IJCNN)}, 
+ title={Disentangled representations of microscopy images}, 
+ year={2025},
+ pages={1-8},
+}
