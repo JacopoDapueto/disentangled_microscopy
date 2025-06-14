@@ -64,8 +64,12 @@ The features are saved in DISENTANGLEMENT_LIB_DATA as `SIMPLE_FEATURES/represent
 
 
 ### Train Source models
-**RGB Input:** We trained the Source models on  input using the implementation of Ada-GVAE and dSprites in [transfer_disentanglement](https://github.com/JacopoDapueto/transfer_disentanglement).
-**$\Phi$ Input:**
+**RGB Input:** We trained the Source models on RGB input using the implementation of Ada-GVAE and dSprites in [transfer_disentanglement](https://github.com/JacopoDapueto/transfer_disentanglement).
+
+**$\Phi$ Input:** Train the Source models trained on the $\Phi$ with the command
+```
+
+```
 
 ### Transfer on Target dataset
 **Once** you have trained the source models, put them in `./input` folder and run the scripts to execute the transfer experiments.
