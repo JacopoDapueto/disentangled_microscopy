@@ -68,7 +68,7 @@ The features are saved in DISENTANGLEMENT_LIB_DATA as `SIMPLE_FEATURES/represent
 
 **$\Phi$ Input:** Train the Source models trained on the $\Phi$ with the command
 ```
-
+python dlib_training_adagvae.py
 ```
 
 ### Transfer on Target dataset
