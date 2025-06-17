@@ -17,7 +17,7 @@ FLAGS = flags.FLAGS
 
 
 flags.DEFINE_string("experiment", "BACKBONE_to_lenseless_test_dileptus", "Name of the experiment to run")
-flags.DEFINE_string("config", "vit_dino-brodatz_texture_dsprites_to_maskedplankton_testdileptus", "Name of the config to run")
+flags.DEFINE_string("config", "vit_dino-brodatz_texture_dsprites_to_maskedplankton", "Name of the config to run")
 
 flags.DEFINE_integer("n_sweep", 20, "Number of sweeps to run")
 

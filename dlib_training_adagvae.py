@@ -11,7 +11,7 @@ from code.training.train_adagvae import train_model
 
 
 FLAGS = flags.FLAGS
-flags.DEFINE_string("experiment", "VAE_DRL_microscopy", "Name of the experiment to run")
+flags.DEFINE_string("experiment", "adagvae_phi", "Name of the experiment to run")
 flags.DEFINE_string("config", "train_drl_brodatz_texture_dsprites", "Name of the config to run")
 flags.DEFINE_string("output_directory", None, "Output directory of experiments ('{model_num}' will be"
                                                 " replaced with the model index  and '{experiment}' will be"

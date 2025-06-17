@@ -176,8 +176,7 @@ class TextureDSprites(data.Dataset): # data.Dataset
     # By default, all factors (including shape) are considered ground truth
     # factors.
 
-    super(SimpleTextureDSprites, self).__init__()
-    #super(SimpleTextureDSprites, self).__init__(latent_factor_indices, batch_size, random_state)
+    super(TextureDSprites, self).__init__()
 
     if latent_factor_indices is None:
       latent_factor_indices = list(range(7))
