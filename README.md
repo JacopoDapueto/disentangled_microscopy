@@ -54,6 +54,7 @@ The representation is saved in DISENTANGLEMENT_LIB_DATA as .npz file.
 
 The name of the datasets to be used can be found in `./code/choose_dataset.py`
 
+**Alternatively** the representation can be downloaded from [[Dataset🤗]()]
 
 ### Compute hand-crafted features
 To extract the hand-crafted features of Lensless:
