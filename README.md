@@ -127,7 +127,7 @@ If you use our dataset or code, please give the repository a star ⭐ and cite o
 
 ```BibTeX
 @inproceedings{IJCNN2025_dapueto,
- author = {Dapueto, Jacopo and Vito Paolo, Pastore and Noceti, Nicoletta and Odone, Francesca},
+ author = {Dapueto, Jacopo and Pastore, Vito Paolo  and Noceti, Nicoletta and Odone, Francesca},
  booktitle={2025 International Joint Conference on Neural Networks (IJCNN)}, 
  title={Disentangled representations of microscopy images}, 
  year={2025},
