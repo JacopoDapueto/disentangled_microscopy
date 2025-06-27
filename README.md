@@ -3,7 +3,7 @@ This is official code repository of the paper **"Disentangled representations of
 
 **Jacopo Dapueto**, Vito Paolo Pastore, Nicoletta Noceti, Francesca Odone
 
-[[ArXiv preprint📃](https://arxiv.org/abs/2506.20649)] <> [[Dataset🤗]()]
+[[ArXiv preprint📃](https://arxiv.org/abs/2506.20649)] <!--- [[Dataset🤗]()] -->
 
 <img src="https://github.com/JacopoDapueto/disentangled_plankton/blob/main/assets/pipeline.png" width="50%" align="center">
 
