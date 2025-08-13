@@ -126,10 +126,12 @@ If you have any questions, you are very welcome to email jacopo.dapueto@gmail.co
 If you use our dataset or code, please give the repository a star ⭐ and cite our paper:
 
 ```BibTeX
-@inproceedings{IJCNN2025_dapueto,
- author = {Dapueto, Jacopo and Pastore, Vito Paolo  and Noceti, Nicoletta and Odone, Francesca},
- booktitle={2025 International Joint Conference on Neural Networks (IJCNN)}, 
- title={Disentangled representations of microscopy images}, 
- year={2025},
- pages={1-8},
+@misc{dapueto2025disentangledrepresentationsmicroscopyimages,
+      title={Disentangled representations of microscopy images}, 
+      author={Jacopo Dapueto and Vito Paolo Pastore and Nicoletta Noceti and Francesca Odone},
+      year={2025},
+      eprint={2506.20649},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={https://arxiv.org/abs/2506.20649}, 
 }
