@@ -126,12 +126,13 @@ If you have any questions, you are very welcome to email jacopo.dapueto@gmail.co
 If you use our dataset or code, please give the repository a star ⭐ and cite our paper:
 
 ```BibTeX
-@misc{dapueto2025disentangledrepresentationsmicroscopyimages,
-      title={Disentangled representations of microscopy images}, 
-      author={Jacopo Dapueto and Vito Paolo Pastore and Nicoletta Noceti and Francesca Odone},
-      year={2025},
-      eprint={2506.20649},
-      archivePrefix={arXiv},
-      primaryClass={cs.CV},
-      url={https://arxiv.org/abs/2506.20649}, 
-}
+@INPROCEEDINGS{11228114,
+  author={Dapueto, Jacopo and Pastore, Vito Paolo and Noceti, Nicoletta and Odone, Francesca},
+  booktitle={2025 International Joint Conference on Neural Networks (IJCNN)}, 
+  title={Disentangled representations of microscopy images}, 
+  year={2025},
+  volume={},
+  number={},
+  pages={1-8},
+  keywords={Accuracy;Protocols;Shape;Image color analysis;Microscopy;Plankton;Disentangled representation learning;Transfer learning;Benchmark testing;Synthetic data;microscopy images;disentangled representations;transfer learning;interpretability},
+  doi={10.1109/IJCNN64981.2025.11228114}}
