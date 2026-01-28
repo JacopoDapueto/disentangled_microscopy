@@ -126,13 +126,20 @@ If you have any questions, you are very welcome to email jacopo.dapueto@gmail.co
 If you use our dataset or code, please give the repository a star ⭐ and cite our paper:
 
 ```BibTeX
-@INPROCEEDINGS{11228114,
-  author={Dapueto, Jacopo and Pastore, Vito Paolo and Noceti, Nicoletta and Odone, Francesca},
-  booktitle={2025 International Joint Conference on Neural Networks (IJCNN)}, 
-  title={Disentangled representations of microscopy images}, 
-  year={2025},
-  volume={},
-  number={},
-  pages={1-8},
-  keywords={Accuracy;Protocols;Shape;Image color analysis;Microscopy;Plankton;Disentangled representation learning;Transfer learning;Benchmark testing;Synthetic data;microscopy images;disentangled representations;transfer learning;interpretability},
-  doi={10.1109/IJCNN64981.2025.11228114}}
+@inproceedings{DBLP:conf/ijcnn/DapuetoPNO25,
+  author       = {Jacopo Dapueto and
+                  Vito Paolo Pastore and
+                  Nicoletta Noceti and
+                  Francesca Odone},
+  title        = {Disentangled representations of microscopy images},
+  booktitle    = {International Joint Conference on Neural Networks, {IJCNN} 2025, Rome,
+                  Italy, June 30 - July 5, 2025},
+  pages        = {1--8},
+  publisher    = {{IEEE}},
+  year         = {2025},
+  url          = {https://doi.org/10.1109/IJCNN64981.2025.11228114},
+  doi          = {10.1109/IJCNN64981.2025.11228114},
+  timestamp    = {Fri, 21 Nov 2025 20:23:55 +0100},
+  biburl       = {https://dblp.org/rec/conf/ijcnn/DapuetoPNO25.bib},
+  bibsource    = {dblp computer science bibliography, https://dblp.org}
+}
